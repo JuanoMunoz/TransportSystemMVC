@@ -20,8 +20,7 @@ namespace TransportSystemMVC.Controllers
             _context = context;
         }
 
-        // GET: Trucks
-        [Authorize]
+
         public async Task<IActionResult> Index()
         {
             var transportDBContext = _context.Trucks.Include(t => t.RouteFrom).Include(t => t.RouteTo).Include(t => t.Status);

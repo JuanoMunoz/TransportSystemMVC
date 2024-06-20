@@ -21,7 +21,7 @@ namespace TransportSystemMVC.Controllers
         }
 
         // GET: Messages
-        [Authorize]
+
         public async Task<IActionResult> Index()
         {
             var transportDBContext = _context.Message.Include(m => m.User);
